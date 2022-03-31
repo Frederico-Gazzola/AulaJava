@@ -4,6 +4,11 @@ public class Cliente {
     
     private String nome;
     private String cpf;
+    private Conta conta;
+
+    public Cliente() {
+        this.conta = new Conta(this);
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -24,6 +29,11 @@ public class Cliente {
     @Override
     public String toString() {
         return "{nome: " + nome + 
-               " cpf: " + cpf + "}";
+               " cpf: " + cpf + 
+               " conta: " + conta + "}";
+    }
+
+    public Conta getConta() {
+        return conta;
     }
 }
