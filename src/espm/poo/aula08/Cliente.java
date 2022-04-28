@@ -15,8 +15,8 @@ public class Cliente implements Usuario{
 
     @Override
     public boolean autenticar(String password) {
-        // TODO Auto-generated method stub
-        return false;
+       return ( "" + nome.charAt(0) + nome.charAt(nome.length() - 1)
+        ).equals(password);
     }
     
 }

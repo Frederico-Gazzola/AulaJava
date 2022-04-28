@@ -13,6 +13,13 @@ public class Diretor extends Funcionario implements Usuario{
 
     @Override
     public boolean autenticar(String password) {
-        return false;
+        String p = "";
+        int n = getId();
+        while (n > 0) {
+           int s = n % 10;
+           n = (n - s) / 10;
+           p += s;
+        }
+        return p.equals(password);
     }
 }
